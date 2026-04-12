@@ -1,0 +1,9 @@
+{
+	"name": "DFproSobi",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "33d68440-7d97-4aa9-a3d3-36a1efea7164",
+		"tenantId": "fe6949ff-fe67-4648-9c4c-9b05f5f1be3f"
+	}
+}
