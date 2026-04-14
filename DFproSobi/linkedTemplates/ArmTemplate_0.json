@@ -460,7 +460,18 @@
 							},
 							"waitOnCompletion": true,
 							"parameters": {
-								"table": "Orders"
+								"schems": {
+									"value": "@{pipeline().parameters.schema}",
+									"type": "Expression"
+								},
+								"table": {
+									"value": "@{pipeline().parameters.table}",
+									"type": "Expression"
+								},
+								"back_date": {
+									"value": "@{pipeline().parameters.backdate}",
+									"type": "Expression"
+								}
 							}
 						}
 					},
