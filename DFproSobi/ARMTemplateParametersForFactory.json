@@ -11,6 +11,9 @@
 		"ls_datalake_accountKey": {
 			"value": ""
 		},
+		"RestService1_properties_typeProperties_url": {
+			"value": "https://pokeapi.co/api/v2/pokemon"
+		},
 		"ls_database_properties_typeProperties_server": {
 			"value": "dfproserversobi.database.windows.net"
 		},

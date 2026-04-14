@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_datalake'"
 		},
+		"RestService1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://pokeapi.co/api/v2/pokemon"
+		},
 		"ls_database_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "dfproserversobi.database.windows.net"
@@ -75,6 +79,9 @@
 					},
 					"ls_datalake_accountKey": {
 						"value": "[parameters('ls_datalake_accountKey')]"
+					},
+					"RestService1_properties_typeProperties_url": {
+						"value": "[parameters('RestService1_properties_typeProperties_url')]"
 					},
 					"ls_database_properties_typeProperties_server": {
 						"value": "[parameters('ls_database_properties_typeProperties_server')]"
