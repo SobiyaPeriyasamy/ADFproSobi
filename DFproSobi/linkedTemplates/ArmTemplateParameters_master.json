@@ -23,6 +23,15 @@
 		"ls_datalake_properties_typeProperties_url": {
 			"value": "https://adfprostorageaccountsobi.dfs.core.windows.net/"
 		},
+		"schedule_properties_schedule_parameters_schema": {
+			"value": "source"
+		},
+		"schedule_properties_schedule_parameters_table": {
+			"value": "Orders"
+		},
+		"schedule_properties_schedule_parameters_backdate": {
+			"value": "\"\""
+		},
 		"containerUri": {
 			"value": ""
 		},

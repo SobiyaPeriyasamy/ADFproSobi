@@ -30,6 +30,18 @@
 		"ls_datalake_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adfprostorageaccountsobi.dfs.core.windows.net/"
+		},
+		"schedule_properties_schedule_parameters_schema": {
+			"type": "string",
+			"defaultValue": "source"
+		},
+		"schedule_properties_schedule_parameters_table": {
+			"type": "string",
+			"defaultValue": "Orders"
+		},
+		"schedule_properties_schedule_parameters_backdate": {
+			"type": "string",
+			"defaultValue": "\"\""
 		}
 	},
 	"variables": {
@@ -544,7 +556,11 @@
 							"referenceName": "schedule",
 							"type": "PipelineReference"
 						},
-						"parameters": {}
+						"parameters": {
+							"schema": "[parameters('schedule_properties_schedule_parameters_schema')]",
+							"table": "[parameters('schedule_properties_schedule_parameters_table')]",
+							"backdate": "[parameters('schedule_properties_schedule_parameters_backdate')]"
+						}
 					}
 				],
 				"type": "ScheduleTrigger",
