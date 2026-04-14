@@ -329,7 +329,6 @@
 							},
 							"waitOnCompletion": true,
 							"parameters": {
-								"schems": "source",
 								"table": "Orders"
 							}
 						}
@@ -369,6 +368,20 @@
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"schema": {
+						"type": "string",
+						"defaultValue": "source"
+					},
+					"table": {
+						"type": "string",
+						"defaultValue": "Orders"
+					},
+					"backdate": {
+						"type": "string",
+						"defaultValue": "\"\""
+					}
 				},
 				"annotations": []
 			},
@@ -529,8 +542,7 @@
 						"frequency": "Day",
 						"interval": 1,
 						"startTime": "2026-04-14T23:00:00",
-						"timeZone": "India Standard Time",
-						"schedule": {}
+						"timeZone": "India Standard Time"
 					}
 				}
 			},
