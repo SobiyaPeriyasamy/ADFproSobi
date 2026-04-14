@@ -102,7 +102,10 @@
 								"requestInterval": "00.00:00:00.010",
 								"requestMethod": "GET",
 								"paginationRules": {
-									"AbsoluteUrl": "$.next"
+									"QueryParameters.offset": {
+										"value": "Range:0:@{activity('endpoint').output.count}:20",
+										"type": "Expression"
+									}
 								}
 							},
 							"sink": {
@@ -634,7 +637,12 @@
 				},
 				"annotations": [],
 				"type": "RestResource",
-				"typeProperties": {},
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "?offset=(offset)",
+						"type": "Expression"
+					}
+				},
 				"schema": []
 			},
 			"dependsOn": [
