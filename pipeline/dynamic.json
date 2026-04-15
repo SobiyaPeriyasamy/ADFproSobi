@@ -88,12 +88,45 @@
 															"type": "DelimitedTextReadSettings"
 														}
 													},
-													"enableStaging": false
+													"sink": {
+														"type": "DelimitedTextSink",
+														"storeSettings": {
+															"type": "AzureBlobFSWriteSettings"
+														},
+														"formatSettings": {
+															"type": "DelimitedTextWriteSettings",
+															"quoteAllText": true,
+															"fileExtension": ".txt"
+														}
+													},
+													"enableStaging": false,
+													"translator": {
+														"type": "TabularTranslator",
+														"typeConversion": true,
+														"typeConversionSettings": {
+															"allowDataTruncation": true,
+															"treatBooleanAsNumber": false
+														}
+													}
 												},
 												"inputs": [
 													{
 														"referenceName": "DSCSVDYNAMIC",
 														"type": "DatasetReference"
+													}
+												],
+												"outputs": [
+													{
+														"referenceName": "DSCSVDYNAMIC",
+														"type": "DatasetReference",
+														"parameters": {
+															"container": "sink",
+															"folder": "files",
+															"file": {
+																"value": "@split(activity('Get Metadata1').output.childItems,'.')[0]",
+																"type": "Expression"
+															}
+														}
 													}
 												]
 											}
