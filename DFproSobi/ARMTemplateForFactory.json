@@ -291,7 +291,7 @@
 												]
 											},
 											{
-												"value": "coaches.",
+												"value": "coaches",
 												"activities": [
 													{
 														"name": "Copy data1_copy1",
@@ -457,11 +457,6 @@
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
-				},
-				"parameters": {
-					"filename": {
-						"type": "string"
-					}
 				},
 				"annotations": []
 			},
