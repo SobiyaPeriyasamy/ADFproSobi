@@ -141,7 +141,7 @@
 										]
 									},
 									{
-										"value": "coaches.",
+										"value": "coaches",
 										"activities": [
 											{
 												"name": "Copy data1_copy1",
@@ -305,11 +305,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"filename": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
