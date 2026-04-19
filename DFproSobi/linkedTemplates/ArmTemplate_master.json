@@ -94,6 +94,24 @@
 					},
 					"ls_datalake_properties_typeProperties_url": {
 						"value": "[parameters('ls_datalake_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "DFproSobi_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
 					},
 					"schedule_properties_schedule_parameters_schema": {
 						"value": "[parameters('schedule_properties_schedule_parameters_schema')]"
@@ -106,7 +124,9 @@
 					}
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'DFproSobi_ArmTemplate_0')]"
+			]
 		}
 	]
 }
